@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- RWD指定螢幕寬度為裝置寬度，畫面載入初始縮放比例 100% -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+    <title></title>
+    <!--bootstrap-->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <!--圖示載入  defer:下載及分析完成後才會執行  integrity: 驗證完整性  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/solid.js" integrity="sha384-+Ga2s7YBbhOD6nie0DzrZpJes+b2K1xkpKxTFFcx59QmVPaSA8c7pycsNaFwUK6l" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/regular.js" integrity="sha384-t7yHmUlwFrLxHXNLstawVRBMeSLcXTbQ5hsd0ifzwGtN7ZF7RZ8ppM7Ldinuoiif" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <!-- 圖片輪播-->
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/all.css">
+</head>
+<body>
+    <div class="jumbotron" id="home"> <!-- bootstrap jumbotron-->
+    <h1 class="display-4">Hi! I'm Jerry Wu</h1>
+    <marquee direction="right" height="50" scrollamount="7" behavior="alternate" 
+    onMouseOver="this.stop()" onMouseOut="this.start()">welcome!!</marquee>
+    <p><span class="blink_me"></span></p>
+    <div class="social-icon">
+        <a href="#" target="_blank">
+            <i class="fab fa-facebook fa-3x" aria-hidden="true"></i>
+        </a>
+        <a href="#" target="_blank">
+            <i class="fab fa-instagram fa-3x" aria-hidden="true"></i>
+        </a>
+        <a href="https://github.com/jw310" target="_blank" class="github">  <!-- 開啟新視窗-->
+        <i class="fab fa-github fa-3x" aria-hidden="true"></i>
+        </a>
+    </div>
+    <div class="arrow-down">
+        <a href="#profile" class="anchor">
+        <i class="fa fa-angle-double-down fa-4x animated infinite bounce" aria-hidden="true"></i>
+        </a>
+    </div>
+    </div>
+    
+    <div class="personal-profile" id="profile">
+    <div class="nav">
+        <div class="home">
+        <a href="#home" class="anchor">home</a>
+        </div>
+        <ul>
+        <li class="profile"><a href="#profile" class="anchor">profile</a></li>
+        <li class="resume"><a href="#resume" class="anchor">resume</a></li>
+        <li class="skill"><a href="#skill" class="anchor">skills</a></li>
+        <li class="portfolio"><a href="#portfolio" class="anchor">portfolio</a></li>
+        <li class="contact"><a href="#contact" class="anchor">contact</a></li>
+        </ul>
+        <!-- <div class="phone-bar pull-right"><i class="fa fa-bars" aria-hidden="true"></i></div> -->
+    </div>
+    <div class="phone-bar pull-right"><i class="fa fa-bars" aria-hidden="true"></i></div>
+    <div class="menu-s">
+        <ul>
+        <li><a href="#profile" class="anchor">profile</a></li>
+        <li><a href="#resume" class="anchor">resume</a></li>
+        <li><a href="#skill" class="anchor">skills</a></li>
+        <li><a href="#portfolio" class="anchor">portfolio</a></li>
+        <li><a href="#contact" class="anchor">contact</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <h2>Personal profile</h2>
+        <div class="spacer"></div>
+    </div>
+
+    <div class="slider-wrap">
+        <div class="slider slick">
+          <img src="images/wu.jpg" alt="" class="avatar">
+          <img src="images/wu2.jpg" alt="" class="avatar" >
+        </div>
+        <div class="intro">
+        <p class="first-p">我是吳宗勳，現居新北市。</p>
+        <p>在檢驗所任職的日子裡，雖然碰到程式開發的時候不算多。但從在學時期各種關於軟體工程的課程，以及公司同事教導及建議下
+            ，慢慢對程式開發產生了興趣。</p>
+        <p>
+            <strong>
+            之後慢慢開始付費參加了一些前端網頁開發課程，也透過許多網路資源來學習，發現自己對於這一塊產生濃厚興趣，會趁著空閒時間去瞭解相關技術
+            ，也決定在之後職涯轉換跑道至這領域。雖然目前還有很多需要學習的地方，但期許自己在未來可以成為獨當一面的前端工程師，
+            如 Javascript、Jquery、Bootstrap、Vue.js、Git、Sass 這些技能，都會在下班以及假日的時間學習，提升自己的實力。
+            </strong>
+        </p>
+        <p>對於新事物有所好奇，希望能夠不斷持續進步和成長，期待在未來開花結果!</p>
+        </div>
+    </div>
+    </div>
+
+    <div class="resume-wrap" id="resume">
+    <div class="main-content">
+        <h2>Resume</h2>
+        <div class="spacer"></div>
+    </div>
+
+    <div class="main-box">
+        <div class="resume-content">
+        <div class="sub-title">
+            <h3>Education</h3>
+        </div>
+        <div class="resume-article">
+            <h4 class="job-title">
+            <strong>國立臺北商業大學 資訊與決策科學研究所 Institute of Information and Decision Sciences</strong>
+            <span class="space"><i class="far fa-calendar-alt" aria-hidden="true"></i> 2012 ~ 2015</span>
+            </h4>
+            <p>在研究所時期，主要研究方向為圖論、演算法的部分。但亦有接觸其他資訊科技，
+                如多準則決策分析、Big Data、物聯網、雲端技術等等。</p>
+        </div>
+        <div class="resume-article">
+            <h4 class="job-title">
+            <strong>國立臺北商業大學 資訊管理系 Department of Information Management </strong>
+            <span class="space"><i class="far fa-calendar-alt" aria-hidden="true"></i> 2008 ~ 2011</span>
+            </h4>
+            <p>在北商資管系的課程規劃下，除了接觸了關於程式設計方面的相關知識，例如資料結構、演算法、作業系統、VB...等等。
+                同時其他的選修課程例如藝術概論、證券市場與經營實務...等等。也讓我能接觸到其他不同領域。</p>
+        </div>
+        <div class="resume-article">
+            <h4 class="job-title">
+            <strong>私立華夏科技大學 電子工程系 Department of Electronic Engineering </strong>
+            <span class="space"><i class="far fa-calendar-alt" aria-hidden="true"></i> 1997 ~ 2002</span>
+            </h4>
+            <p>在專科時期，學習了電腦及周邊設備的軟硬體知識。除了基礎理論外，也經由實作來輔助。記得
+            當時專題製作的題目是紅外線測距器，那時除了硬體電路的設計外，還撰寫了單晶片 8051 的程式控制。</p>
+        </div>
+        </div>
+    </div>
+
+    <div class="main-box">
+        <div class="resume-content">
+        <div class="sub-title">
+            <h3>Experience</h3>
+        </div>
+        <div class="resume-article">
+            <h4 class="job-title">
+            <strong>大安聯合醫事檢驗所 資訊工程師</strong>
+            <span class="space"><i class="far fa-calendar-alt" aria-hidden="true"></i> 2015 ~ 2019</span>
+            </h4>
+            <p>大安聯合醫事檢驗所為台灣最大醫事檢驗機構之一，在公司擔任資訊工程師一職。平時負責工作範圍為：</p>
+                <ul>
+                    <li>server 及電腦、網路設備故障排除</li>
+                    <li>資料庫管理及維護</li>
+                    <li>資訊設備環境設定</li>
+                    <li>軟硬體設備預算與採買規劃</li>
+                </ul>
+            <p>經手處理的專案有：</p>
+                <ul>
+                    <li>庫存管理軟體導入-<strong>結合 PDA ，簡化進銷貨流程。降低人為錯誤率。</strong></li>
+                    <li>CRM 軟體導入-<strong>顧客及廠商資料電子化，往來紀錄檔案方便存查。</strong></li>
+                    <li>檢驗自動化軌道協助建置-<strong>提高檢驗流程效率約 20 %。</strong></li>
+                    <li>檢驗雲網站建置及設定-<strong>簡化檢驗資料查詢流程及改善查詢體驗。</strong></li>
+                </ul>
+        </div>
+        <div class="resume-article">
+            <h4 class="job-title">
+            <strong>宏通數碼科技股份有限公司 副管理師</strong>
+            <span class="space"><i class="far fa-calendar-alt" aria-hidden="true"></i> 2004 ~ 2011</span>
+            </h4>
+            <p>宏通為國內磁條/晶片卡製造與個人化發卡領導廠商。加入宏通六年多期間擔任單位副管理師之職務，職務範圍包括IC智慧卡之生產與個人化之發卡製造，
+                依據標準流程，製卡後即寄送至客戶。在製卡過程中，嚴格要求對卡片內容的核對及客戶資料的保密；同時為因應個人化之發卡製造，在多樣化的卡片與各種不同製卡模式下，也能確實掌握要領，規劃出最佳排程，兼顧產能效率與卡片資料正確性。
+                後因公司擴大業務需求，而派駐至銀行協助相關製造業務移轉回公司，並擔任退件窗口與郵局、銀行接洽、聯繫，負責管理退件資料庫。在職期間擔任同事和公司間的橋樑，協助訓練新進員工，同時管理工讀生、分派工作來處理退件相關事項，
+                使其儘早了解工作內容及適應環境。</p>
+        </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="skill-wrap" id="skill">
+    <div class="main-content">
+        <h2>Skills</h2>
+        <div class="spacer"></div>
+    </div>
+
+    <div class="chart-wrap">
+        <div class="chart">
+        <div class="chart-grid" style="top: 10%">
+            <!-- <div>excellent</div> -->
+        </div>
+        <div class="chart-grid" style="top: 35%">
+            <!-- <div>good</div> -->
+        </div>
+        <div class="chart-grid" style="top: 60%">
+            <!-- <div>not bad</div> -->
+        </div>
+        <div class="chart-grid" style="top: 85%">
+            <!-- <div>newbie</div> -->
+        </div>
+        <div id="bar-1" class="bar" style="left: 8%; height: 320px;">
+            <span class="skill-title">HTML</span>
+        </div>
+        <div id="bar-2" class="bar" style="left: 23%; height: 260px;">
+            <span class="skill-title">CSS</span>
+        </div>
+        <div id="bar-5" class="bar" style="left: 38%; height: 260px;">
+            <span class="skill-title">Sass</span>
+        </div>
+        <div id="bar-3" class="bar" style="left: 53%; height: 300px;">
+            <span class="skill-title">JS/JQuery</span>
+        </div>
+        <div id="bar-6" class="bar" style="left: 68%; height: 300px;">
+            <span class="skill-title">Git</span>
+        </div>
+        <div id="bar-4" class="bar" style="left: 83%; height: 310px;">
+            <span class="skill-title">Vue</span>
+        </div>
+        </div>
+
+        <div class="able">
+        <h4>Knowledge</h4>
+        <div>
+        <p>
+            <span><i class="fab fa-html5" aria-hidden="true"></i></span>
+            HTML/CSS(Sass)-網頁排版與 RWD 響應式設計
+        </p>
+        </div>
+        <p>
+            <span><i class="fab fa-bootstrap" aria-hidden="true"></i></span>
+            Bootstrap-CSS 框架應用
+         </p>
+        <p>
+            <span><i class="fab fa-css3-alt" aria-hidden="true"></i></span>
+            JS/JQuery-AJAX 非同步處理、使用 jQuery Plugin 整合第三方插件動畫效果
+        </p>
+        <p>
+            <span><i class="fab fa-js" aria-hidden="true"></i></span>
+            VueJS-Vue Cli 開發、使用 Vue Router 製作 SPA
+        </p>
+        <!-- <p>
+            <span><i class="fab fa-node" aria-hidden="true"></i></span>
+            Node.js
+        </p> -->
+        </div>
+
+        <div class="able">
+        <h4>OTHER</h4>
+        <p>
+            <span><i class="fab fa-git" aria-hidden="true"></i></span>
+            Git/Sourcetree-專案版本控制
+        </p>
+        <p>
+            <span><i class="fas fa-database" aria-hidden="true"></i></span>
+            SQL-資料庫資料操作
+        </p>
+        <p>
+            <span><i class="fab fa-firebase" aria-hidden="true"></i></span>
+            Firebase-資料儲存串接
+        </p>
+        <p>
+            <span><i class="fab fa-firebase" aria-hidden="true"></i></span>
+            Postman-API 測試使用
+        </p>
+        </div>
+
+        <div class="able">
+        <h4>Language</h4>
+        <p>Chinese</p>
+        <div class="skill-bar">
+            <div class="skill-rate-1"></div>
+            <div class="skill-rate-2"></div>
+            <div class="skill-rate-3"></div>
+            <div class="skill-rate-4"></div>
+        </div>
+        <p>English</p>
+        <div class="skill-bar">
+            <div class="skill-rate-1"></div>
+            <div class="skill-rate-2"></div>
+            <div class="skill-rate-0"></div>
+            <div class="skill-rate-0"></div>
+        </div>
+        </div>
+    </div>
+    </div>   
+
+    <div class="portfolio-wrap" id="portfolio">
+    <div class="main-content">
+        <h2>Portfolio</h2>
+        <div class="spacer"></div>
+    </div>
+
+<div class="portfolio-content">
+        <ul class="portfolio-list">
+            <div class="project">
+                <a href="https://jw310.github.io/plugin/" target="_blank"><img src="images/plugin.png" alt="" title="plugin"></a>
+                <p>
+                套件收集<br>
+                ---------------<br>
+                利用 vuetify 框架跟 vue3.0 來製作<br>
+                串接 Firebase 來存取資料
+                </p>
+            </div>
+            <div class="project">
+                <a href="https://jw310.github.io/vue_todolist/" target="_blank"><img src="images/vuetodolist.png" alt="" title="vue_todolist"></a>
+                <p>
+                Vue_todolist<br>
+                ---------------<br>             
+                Vue2.0 練習<br>
+                localStorage 儲存資料運用
+                </p>
+            </div>
+            <div class="project">
+                <a href="https://jw310.github.io/profile/" target="_blank"><img src="images/profile.png" alt="" title="resume"></a>
+                <p>
+                Resume<br>
+                ---------------<br>
+                HTML/CSS(Sass) 排版練習<br>
+                JQuery 套件運用<br>
+                RWD 設計
+                </p>
+            </div>
+            <div class="project"> 
+                <a href="https://jw310.github.io/vue3esite/" target="_blank"><img src="images/vue3esite.png" alt="" title="vue3esite"></a>
+                <p>
+                購物網站<br>
+                ---------------<br>
+                Vue3.0 使用<br>
+                串接六角 API 資料存取<br>
+                使用 Vue Router 製作單頁應用(SPA)<br>
+                表單驗證功能
+                </p>
+            </div>
+            <div class="project">
+                <a href="https://jw310.github.io/calc/" target="_blank"><img src="images/calc.png" alt="" title="calc"></a>
+                <p>
+                簡易計算機<br>
+                ---------------<br>
+                JQuery 練習<br>
+                flex 排版<br>
+                </p>
+            </div>
+            <div class="project">
+                <a href="https://jw310.github.io/timezone/" target="_blank"><img src="images/timezone.png" alt="" title="timezone"></a>
+                <p>
+                時區<br>
+                ---------------<br>
+                JavaScript 練習<br>
+                排版練習
+                </p>
+            </div>
+        </ul>
+    </div>
+    </div>
+
+    <div class="contact-wrap" id="contact">
+    <div class="main-content">
+        <h2>contact</h2>
+        <div class="spacer"></div>
+    </div>
+
+    <div class="contact-content">
+        <!-- <h4 class="contact-title">Please feel free to contact me at anytime.</h4> -->
+        <div class="contact-list">
+        <p>
+            <span><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+            New Taipei City, Taiwan
+        </p>
+        <p>
+            <span><i class="fa fa-envelope" aria-hidden="true"></i></span>
+            10166007@ntub.edu.tw
+        </p>
+        </div>  
+        <div class="contact-form">
+        <form action="MAILTO:10166007@ntub.edu.tw?subject=Hello! Jerry!" method="post" enctype="text/plain">
+            <input type="text" placeholder="Name" required>
+            <input type="text" placeholder="Your email" required>
+            <textarea name="" id="" placeholder="Message"></textarea>
+            <div class="button-wrap">
+            <button class="btn send" type="send"><i class="fa fa-paper-plane" aria-hidden="true"></i>send</button>
+            <button class="btn pull-right reset" type="reset">Reset</button>
+            </div>
+        </form>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="arrow-up">
+        <a href="#home" class="anchor"><i class="fa fa-chevron-up fa-2x" aria-hidden="true"></i></a>
+        </div>
+        <div class="footer-social">
+        <a href="#" target="_blank">
+            <i class="fab fa-facebook fa-2x" aria-hidden="true"></i>
+        </a>
+        <a href="#" target="_blank">
+            <i class="fab fa-instagram fa-2x" aria-hidden="true"></i>
+        </a>
+        <a href="https://github.com/jw310" target="_blank">
+            <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+        </a>
+        </div>
+        <p>&copy;2019 wu.All rights reserved.</p>
+    </div>
+    </div>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/slick.js"></script> <!--圖片輪播-->
+<script src="js/popper.min.js"></script> <!--特效-->
+<script src="js/all.js"></script>
+</body>
+
+</html>
