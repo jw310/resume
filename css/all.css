@@ -208,6 +208,7 @@ body h2 {
     float: right;
     margin: 1em;
   }
+  /*jQ點擊後動態在 body 加上 class 影響選單高度*/
   .menu-show .menu-s {
     max-height: 500px;
   }

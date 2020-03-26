@@ -71,8 +71,9 @@
 
   $('.showmenu').on('click', function (e) {
     // 用 on 監聽 .burgar_btn 的點擊功能
-    e.preventDefault();
     // 點擊 burgar_btn 時，讓原本的 a 連結效果無效
+    e.preventDefault();
+    // toggleClass()可以用來為匹配的元素進行新增或是刪除CSS類別。實際運作時有點類似開關一樣。如果某個類別存在，那就刪除他，若是不存在那就新增。
     $('body').toggleClass('menu-show');
   });
 
