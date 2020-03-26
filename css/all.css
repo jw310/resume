@@ -167,6 +167,7 @@ body h2 {
 }
 
 .resume-wrap {
+  overflow: hidden;
   position: relative;
   width: 100%;
   background-color: #f2f2f2;
@@ -194,6 +195,10 @@ body h2 {
 
 .resume-wrap h4 {
   color: #0066cc;
+}
+
+.skill-wrap {
+  overflow: hidden;
 }
 
 .skill-wrap .main-content p {
@@ -310,6 +315,7 @@ body h2 {
 }
 
 .portfolio-wrap {
+  overflow: hidden;
   padding-bottom: 20px;
   width: 100%;
   min-height: 60vh;
@@ -320,6 +326,7 @@ body h2 {
 }
 
 .portfolio-list {
+  overflow: hidden;
   margin: 0 auto;
   width: 80%;
   display: -webkit-box;

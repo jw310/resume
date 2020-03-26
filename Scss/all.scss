@@ -196,6 +196,7 @@ body {
 }
 
 .resume-wrap {
+    overflow: hidden;
     position: relative;
     width: 100%;
     background-color: #f2f2f2;
@@ -222,6 +223,7 @@ body {
 }
 
 .skill-wrap {
+    overflow: hidden;
     .main-content p {
         text-align: center;
     }
@@ -322,6 +324,7 @@ body {
 }
 
 .portfolio-wrap {
+    overflow: hidden;
     padding-bottom: 20px;
     width: 100%;
     min-height: 60vh;
@@ -331,6 +334,7 @@ body {
 }
 
 .portfolio-list {
+    overflow: hidden;
     margin: 0 auto;  // 置中效果
     width: 80%;
     display: flex;
