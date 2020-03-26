@@ -1,5 +1,5 @@
-$(document).ready(function(){  // 等所有的 HTML 都載入，且 DOM 都以建構完成執行 { } 內容，將所有 function() 放入裡面是常見做法
-   //console.log("Hello World!");
+($(document).ready(function () {  // 等所有的 HTML 都載入，且 DOM 都以建構完成執行 { } 內容，將所有 function() 放入裡面是常見做法
+  //console.log("Hello World!");
   $('.slick').slick({
     dots: true,             //顯示輪播圖片會顯示圓圈
     infinite: true,         //重覆輪播
@@ -8,23 +8,65 @@ $(document).ready(function(){  // 等所有的 HTML 都載入，且 DOM 都以�
     autoplay: true,         //autoplay : 自動播放
     speed: 300,
     responsive: [  // RWD
-    {
-      breakpoint: 1280,
-      settings: {
+      {
+        breakpoint: 1280,
+        settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          arrows:false,
+          arrows: false,
           infinite: true,
           dots: true,
-      }
-    },
-    {
-      breakpoint: 568,
-      settings: {
+        }
+      },
+      {
+        breakpoint: 568,
+        settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          arrows:false
-      }
-    }]
+          arrows: false
+        }
+      }]
   });
- });
+
+  // 點選箭頭圖示回到頂端
+  $("#top").click(function (e) {
+    e.preventDefault();
+    $("html,body").animate({ scrollTop: 0 }, 1000);
+  });
+  // 捲動頁面後，元素淡入效果
+  $(window).scroll(function () {
+    // 視窗捲動的位置
+    var scrollPos = $(window).scrollTop();
+    // 視窗的高度
+    var windowHeight = $(window).height();
+
+    console.log(scrollPos, windowHeight);
+    $(".animatedJS").each(function () {
+      // 取 y 軸座標
+      var thisPos = $(this).offset().top;
+      console.log(thisPos);
+      if (windowHeight + scrollPos >= thisPos) {
+        $(this).addClass("fadeIn");
+      }
+    });
+    $(".animatedTop").each(function () {
+      var thisPos = $(this).offset().top;
+      if (windowHeight + scrollPos >= thisPos) {
+        $(this).addClass("fadeIn");
+      }
+    });
+    $(".animatedRight").each(function () {
+      var thisPos = $(this).offset().top;
+      if (windowHeight + scrollPos > thisPos) {
+        $(this).addClass("fadeRight");
+      }
+    });
+    $(".animatedLeft").each(function () {
+      var thisPos = $(this).offset().top;
+      if (windowHeight + scrollPos > thisPos) {
+        $(this).addClass("fadeLeft");
+      }
+    });
+  });
+
+}))();

@@ -5,8 +5,8 @@
 }
 
 body {
-  max-width: 1280px;
   margin: 0 auto;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 body h2 {
@@ -14,14 +14,13 @@ body h2 {
 }
 
 .jumbotron {
-  min-width: 100%;
-  height: 100vh;
+  width: 100%;
+  height: 800px;
   padding-top: 25%;
   background: url(../images/sky.jpeg) no-repeat;
   background-size: cover;
   background-position: center;
   text-transform: uppercase;
-  overflow: auto;
   text-align: center;
   color: white;
 }
@@ -48,18 +47,54 @@ body h2 {
   color: white;
 }
 
+.scrollTop {
+  display: block;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  border-radius: 99px;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.scrollTop:hover .fa-arrow-up {
+  color: gray;
+}
+
+.scrollTop .fa-arrow-up {
+  color: #000000;
+  font-size: 35px;
+  margin-top: 3px;
+  margin-left: 5px;
+}
+
+@media (max-width: 376px) {
+  .scrollTop {
+    width: 35px;
+    height: 35px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border: solid 3px #000000;
+  }
+  .scrollTop .fa-arrow-up {
+    font-size: 24px;
+    margin-top: 2px;
+  }
+}
+
 .nav {
   position: fixed;
-  padding: 0 20px 0 20px;
   width: 100%;
+  padding: 0 20px 0 20px;
   line-height: 10px;
   border-bottom: 1px solid #ccc;
-  overflow: auto;
   text-transform: uppercase;
   background-color: rgba(255, 255, 255, 0.8);
   z-index: 10;
   top: 0;
-  min-width: 100%;
   opacity: 0.8;
   /*透明度*/
   -webkit-transition: opacity .5s ease-out;
@@ -100,32 +135,6 @@ body h2 {
 
 .personal-profile p {
   text-align: center;
-}
-
-.menu-s {
-  display: none;
-  position: relative;
-  width: 100%;
-  border-bottom: 1px solid #777;
-  padding: 10px 20px;
-  text-transform: uppercase;
-  background-color: rgba(255, 255, 255, 0.8);
-  z-index: 9;
-}
-
-.phone-bar {
-  position: fixed;
-  color: #777;
-  font-size: 25px;
-  border: 1px solid;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  text-align: center;
-  margin-top: 8px;
-  border-radius: 4px;
-  cursor: pointer;
-  display: none;
 }
 
 .spacer {
@@ -495,5 +504,55 @@ body h2 {
     -webkit-transition: all 1s;
     transition: all 1s;
   }
+}
+
+.animatedJS {
+  opacity: 0;
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+}
+
+.animatedTop {
+  opacity: 0;
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+  -webkit-transform: translateY(150px);
+          transform: translateY(150px);
+}
+
+.fadeIn {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.animatedRight {
+  opacity: 0;
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+  -webkit-transform: translateX(300px);
+          transform: translateX(300px);
+}
+
+.fadeRight {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.animatedLeft {
+  opacity: 0;
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+  -webkit-transform: translateX(-300px);
+          transform: translateX(-300px);
+}
+
+.fadeLeft {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 /*# sourceMappingURL=all.css.map */
