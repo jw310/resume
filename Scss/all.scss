@@ -23,7 +23,6 @@ body {
     background-size: cover;
     background-position: center;
     text-transform: uppercase;
-    // overflow: auto;    // 自動使用捲軸
     text-align: center;
     color: white;
     h1 {  
@@ -131,6 +130,14 @@ body {
     }
 }
 
+@media (max-width: 768px) {
+    .nav {
+    .home, ul {
+        display: none;
+        }
+    }
+}
+
 .personal-profile {
     position: relative;
     width: 100%;
@@ -142,32 +149,80 @@ body {
     }
 }
 
-// .menu-s {
-//     display: none;
-//     position: relative;
-//     width: 100%;
-//     border-bottom: 1px solid #777;
-//     padding: 10px 20px;
-//     text-transform: uppercase;
-//     background-color: rgba(255, 255, 255, 0.8);
-//     z-index: 9;
-// }
+// 漢堡選單
+// 圖示
+.showmenu {
+    color: #69CA62;
+    display: none;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    top: 30px;
+    left: 25px;
+    z-index: 9;
+    cursor: pointer;
+    .fa-bars {
+        font-size: 35px;
+    }
+}
 
-// .phone-bar {
-//     position: fixed;
-//     //z-index: 10;
-//     color: #777;
-//     font-size: 25px;
-//     border: 1px solid;
-//     width: 40px;
-//     height: 40px;
-//     line-height: 40px;
-//     text-align: center;
-//     margin-top: 8px;
-//     border-radius: 4px;
-//     cursor: pointer;
-//     display: none;
-// }
+.menu-s {
+    display: none;
+    position: fixed;
+    width: 100%;
+    // border-bottom: 1px solid #777;
+    // padding: 10px 20px;
+    text-transform: uppercase;
+    // background-color: rgba(255, 255, 255, 0.8);
+    z-index: 9;
+    list-style-type: none;
+    li {
+        line-height: 2em;
+    }
+    a {
+        color: #69CA62;
+        text-decoration: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-s {
+    display: block;
+    /*隱藏選單開始*/
+    max-height: 0px;
+    overflow: hidden;
+    /*隱藏選單結束*/
+    transition: max-height 2.3s;
+    margin-top: 1px;
+    /*絕對定位疊在網頁上*/
+    position: fixed;
+    z-index: 9;
+    /*header 80px+1px boder 線條*/
+    top: 81px;
+    left: 0;
+    right: 0;
+    // background: #69CA62;
+    }
+    // .menu-s li{
+    // border-bottom: 1px dashed #69CA62;
+    // }
+    .menu-s li a{
+    transition: all 0.2s;
+    }
+    .menu-s li a:hover{
+    background: gray;
+    color: #fff;
+    }
+    .showmenu{
+    display: block;
+    float: right;
+    margin: 1em;
+    }
+    // /*jQ點擊後動態在 body 加上 class */
+    .menu-show .menu-s {
+    max-height: 500px
+    }
+}
 
 .spacer {
     width: 100px;

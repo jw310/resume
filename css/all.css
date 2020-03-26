@@ -124,6 +124,12 @@ body h2 {
   font-size: 15px;
 }
 
+@media (max-width: 768px) {
+  .nav .home, .nav ul {
+    display: none;
+  }
+}
+
 .personal-profile {
   position: relative;
   width: 100%;
@@ -135,6 +141,76 @@ body h2 {
 
 .personal-profile p {
   text-align: center;
+}
+
+.showmenu {
+  color: #69CA62;
+  display: none;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  top: 30px;
+  left: 25px;
+  z-index: 9;
+  cursor: pointer;
+}
+
+.showmenu .fa-bars {
+  font-size: 35px;
+}
+
+.menu-s {
+  display: none;
+  position: fixed;
+  width: 100%;
+  text-transform: uppercase;
+  z-index: 9;
+  list-style-type: none;
+}
+
+.menu-s li {
+  line-height: 2em;
+}
+
+.menu-s a {
+  color: #69CA62;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .menu-s {
+    display: block;
+    /*隱藏選單開始*/
+    max-height: 0px;
+    overflow: hidden;
+    /*隱藏選單結束*/
+    -webkit-transition: max-height 2.3s;
+    transition: max-height 2.3s;
+    margin-top: 1px;
+    /*絕對定位疊在網頁上*/
+    position: fixed;
+    z-index: 9;
+    /*header 80px+1px boder 線條*/
+    top: 81px;
+    left: 0;
+    right: 0;
+  }
+  .menu-s li a {
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+  .menu-s li a:hover {
+    background: gray;
+    color: #fff;
+  }
+  .showmenu {
+    display: block;
+    float: right;
+    margin: 1em;
+  }
+  .menu-show .menu-s {
+    max-height: 500px;
+  }
 }
 
 .spacer {

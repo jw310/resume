@@ -40,11 +40,11 @@
     // 視窗的高度
     var windowHeight = $(window).height();
 
-    console.log(scrollPos, windowHeight);
+    // console.log(scrollPos, windowHeight);
     $(".animatedJS").each(function () {
       // 取 y 軸座標
       var thisPos = $(this).offset().top;
-      console.log(thisPos);
+      // console.log(thisPos);
       if (windowHeight + scrollPos >= thisPos) {
         $(this).addClass("fadeIn");
       }
@@ -67,6 +67,13 @@
         $(this).addClass("fadeLeft");
       }
     });
+  });
+
+  $('.showmenu').on('click', function (e) {
+    // 用 on 監聽 .burgar_btn 的點擊功能
+    e.preventDefault();
+    // 點擊 burgar_btn 時，讓原本的 a 連結效果無效
+    $('body').toggleClass('menu-show');
   });
 
 }))();
