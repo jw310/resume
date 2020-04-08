@@ -179,6 +179,7 @@ body h2 {
 
 @media (max-width: 768px) {
   .menu-s {
+    /*選單出現*/
     display: block;
     /*隱藏選單開始*/
     max-height: 0px;
