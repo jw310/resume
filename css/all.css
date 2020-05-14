@@ -72,10 +72,6 @@ body h2 {
 }
 
 @media (max-width: 376px) {
-  .jumbotron {
-    width: 30%;
-    height: 30%;
-  }
   .scrollTop {
     width: 35px;
     height: 35px;
