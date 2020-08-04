@@ -1,12 +1,14 @@
 @charset "UTF-8";
-*, *:after, *:before {
+*,
+*:after,
+*:before {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 body {
   margin: 0 auto;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 body h2 {
@@ -98,8 +100,8 @@ body h2 {
   top: 0;
   opacity: 0.8;
   /*透明度*/
-  -webkit-transition: opacity .5s ease-out;
-  transition: opacity .5s ease-out;
+  -webkit-transition: opacity 0.5s ease-out;
+  transition: opacity 0.5s ease-out;
 }
 
 .nav a {
@@ -137,7 +139,8 @@ body h2 {
 }
 
 @media (max-width: 768px) {
-  .nav .home, .nav ul {
+  .nav .home,
+  .nav ul {
     display: none;
   }
 }
@@ -156,7 +159,7 @@ body h2 {
 }
 
 .showmenu {
-  color: #69CA62;
+  color: #69ca62;
   display: none;
   width: 50px;
   height: 50px;
@@ -185,7 +188,7 @@ body h2 {
 }
 
 .menu-s a {
-  color: #69CA62;
+  color: #69ca62;
   text-decoration: none;
 }
 
@@ -264,6 +267,81 @@ body h2 {
   background-size: cover;
   background-attachment: fixed;
   opacity: 0.7;
+}
+
+.wrap {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 30px auto;
+}
+
+.wrap .card {
+  width: 80%;
+  margin-right: 10px;
+  margin-left: 10px;
+  background-color: #65aaf0;
+  border: 1px solid #fff;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.wrap .card img {
+  width: 100%;
+  vertical-align: middle;
+}
+
+.wrap .card:hover {
+  -webkit-transform: translateY(-30px);
+          transform: translateY(-30px);
+}
+
+.wrap .card:hover .content h2 {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+.wrap .card:hover .content ul li {
+  color: #fff;
+}
+
+.wrap .card .content {
+  padding: 20px;
+  position: relative;
+}
+
+.wrap .card .content h2 {
+  color: #444444;
+  font-size: 24px;
+  font-weight: bold;
+  border-bottom: 1px solid #333333;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+
+@media (max-width: 768px) {
+  .wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .wrap .card {
+    margin: 20px auto;
+  }
 }
 
 .resume-wrap {
@@ -345,7 +423,7 @@ body h2 {
   top: 50%;
   left: 50%;
   color: white;
-  font-size: 1.0rem;
+  font-size: 1rem;
   text-transform: uppercase;
   -webkit-transform: translateX(-50%) translateY(-50%) rotate(-90deg);
           transform: translateX(-50%) translateY(-50%) rotate(-90deg);
@@ -361,7 +439,7 @@ body h2 {
 
 .skill-wrap .chart-wrap .chart-grid div {
   text-transform: uppercase;
-  font-size: 1.0rem;
+  font-size: 1rem;
   font-weight: 800;
   letter-spacing: -px;
   color: #777;
@@ -379,7 +457,7 @@ body h2 {
   font-size: 20px;
   font-weight: bold;
   text-transform: uppercase;
-  background-color: #5779A4;
+  background-color: #5779a4;
   padding: 4px 12px;
   border-radius: 4px;
   color: #fff;
@@ -472,7 +550,7 @@ body h2 {
 }
 
 .portfolio-list span {
-  background-color: #5779A4;
+  background-color: #5779a4;
   padding: 4px 12px;
   border-radius: 4px;
   color: #fff;
@@ -519,7 +597,7 @@ body h2 {
 .contact-wrap .main-content {
   width: 100%;
   padding: 60px 50px 60px 50px;
-  font-family: 'Raleway',微軟正黑體, sans-serif;
+  font-family: 'Raleway', 微軟正黑體, sans-serif;
 }
 
 .contact-wrap .contact-content {

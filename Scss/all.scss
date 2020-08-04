@@ -1,19 +1,20 @@
-*, *:after, *:before {
+*,
+*:after,
+*:before {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-        box-sizing: border-box;  
+    box-sizing: border-box;
 }
 
 body {
     //background-color: #f7f7f7;
     // max-width: 1024px;
     margin: 0 auto;
-    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     h2 {
-    text-align: center;
+        text-align: center;
     }
 }
-
 
 .jumbotron {
     width: 100%;
@@ -27,7 +28,7 @@ body {
     text-transform: uppercase;
     text-align: center;
     color: white;
-    h1 {  
+    h1 {
         font-size: 64px;
         text-shadow: 5px 5px 10px #000; // 文字陰影
     }
@@ -58,10 +59,10 @@ body {
     bottom: 30px;
     right: 30px;
     border-radius: 99px;
-//   -webkit-box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
-//           box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
-//   background-color: rgba(0, 0, 0, 0.4);
-//   border: solid 4px #000000;
+    //   -webkit-box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+    //           box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+    //   background-color: rgba(0, 0, 0, 0.4);
+    //   border: solid 4px #000000;
     cursor: pointer;
     z-index: 999;
 }
@@ -84,36 +85,35 @@ body {
 
 @media (max-width: 376px) {
     .scrollTop {
-    width: 35px;
-    height: 35px;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    border: solid 3px #000000;
+        width: 35px;
+        height: 35px;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        border: solid 3px #000000;
     }
     .scrollTop .fa-arrow-up {
-    font-size: 24px;
-    margin-top: 2px;
+        font-size: 24px;
+        margin-top: 2px;
     }
 }
 
-
 .nav {
     position: fixed;
-    width: 100%;      
+    width: 100%;
     padding: 0 20px 0 20px;
     line-height: 10px;
     border-bottom: 1px solid #ccc;
     // overflow: auto;
     text-transform: uppercase;
     background-color: rgba(255, 255, 255, 0.8);
-    z-index: 10;          
+    z-index: 10;
     top: 0;
-    opacity: 0.8;   /*透明度*/
-    transition: opacity .5s ease-out;   
+    opacity: 0.8; /*透明度*/
+    transition: opacity 0.5s ease-out;
     a {
         text-decoration: none;
-        display: block;    
+        display: block;
     }
     .home {
         float: left;
@@ -127,23 +127,24 @@ body {
         display: flex;
         float: right;
         padding-left: 0;
-        li  {
+        li {
             display: inline-block;
             list-style-type: none;
             margin: 0;
             font-size: 15px;
             padding: 0 0.75rem;
             &:not(:last-child) {
-            border-right: 2px solid #000000;
-            }   
+                border-right: 2px solid #000000;
+            }
         }
     }
 }
 
 @media (max-width: 768px) {
     .nav {
-    .home, ul {
-        display: none;
+        .home,
+        ul {
+            display: none;
         }
     }
 }
@@ -162,7 +163,7 @@ body {
 // 漢堡選單
 // 圖示
 .showmenu {
-    color: #69CA62;
+    color: #69ca62;
     display: none;
     width: 50px;
     height: 50px;
@@ -191,48 +192,48 @@ body {
         line-height: 2em;
     }
     a {
-        color: #69CA62;
+        color: #69ca62;
         text-decoration: none;
     }
 }
 
 @media (max-width: 768px) {
     .menu-s {
-    /*選單出現*/
+        /*選單出現*/
         display: block;
-    /*隱藏選單開始*/
+        /*隱藏選單開始*/
         max-height: 0px;
         overflow: hidden;
-    /*隱藏選單結束*/
+        /*隱藏選單結束*/
         transition: max-height 2.3s;
         margin-top: 1px;
-    /*絕對定位疊在網頁上*/
+        /*絕對定位疊在網頁上*/
         position: fixed;
         z-index: 9;
-    /*header 80px+1px boder 線條*/
+        /*header 80px+1px boder 線條*/
         top: 81px;
         left: 0;
         right: 0;
-    // background: #69CA62;
+        // background: #69CA62;
     }
     // .menu-s li{
     // border-bottom: 1px dashed #69CA62;
     // }
-    .menu-s li a{
+    .menu-s li a {
         transition: all 0.2s;
     }
-    .menu-s li a:hover{
+    .menu-s li a:hover {
         background: gray;
         color: #fff;
     }
-    .showmenu{
+    .showmenu {
         display: block;
         float: right;
         margin: 1em;
     }
     /*jQ點擊後動態在 body 加上 class 影響選單高度*/
     .menu-show .menu-s {
-        max-height: 500px
+        max-height: 500px;
     }
 }
 
@@ -243,7 +244,7 @@ body {
     background: -webkit-linear-gradient(left, #0066cc, #fff);
 }
 
-.slider-wrap{
+.slider-wrap {
     padding: 0 120px 0 120px;
     width: 100%;
     overflow: hidden;
@@ -265,11 +266,70 @@ body {
 .background_image2 {
     width: 100%;
     height: 60vh;
-    background-image: url("../images/sea.jpeg");
+    background-image: url('../images/sea.jpeg');
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
     opacity: 0.7;
+}
+
+.wrap {
+    width: 100%;
+    display: flex;
+    margin: 30px auto;
+    .card {
+        width: 80%;
+        margin-right: 10px;
+        margin-left: 10px;
+        background-color: #65aaf0;
+        border: 1px solid #fff;
+        //卡片位移
+        transform: translateY(0px);
+        transition: all 0.5s;
+        cursor: pointer;
+        img {
+            width: 100%;
+            vertical-align: middle;
+        }
+        //卡片往上位移及顏色變換效果
+        &:hover {
+            transform: translateY(-30px);
+            .content {
+                h2 {
+                    color: #fff;
+                    border-bottom-color: #fff;
+                }
+                ul li {
+                    color: #fff;
+                }
+            }
+        }
+        .content {
+            padding: 20px;
+            position: relative;
+            h2 {
+                color: #444444;
+                font-size: 24px;
+                font-weight: bold;
+                border-bottom: 1px solid #333333;
+                padding-bottom: 10px;
+                margin-bottom: 10px;
+                text-align: center;
+                transition: 0.25s;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .card {
+            margin: 20px auto;
+        }
+    }
 }
 
 .resume-wrap {
@@ -302,7 +362,7 @@ body {
 .background_image3 {
     width: 100%;
     height: 100vh;
-    background-image: url("../images/kevin-wolf-jZ0Q7vAOF7A-unsplash.jpg");
+    background-image: url('../images/kevin-wolf-jZ0Q7vAOF7A-unsplash.jpg');
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -315,116 +375,114 @@ body {
         text-align: center;
     }
     .chart-wrap {
-    width: 80%;
-    margin: 0 auto;
-    padding-bottom: 20px;
-    overflow: hidden;    
-    .chart {
-        position: relative;
-        float: right;
         width: 80%;
-        height: 420px;
-        margin-bottom: 20px;
-        border-left: 2px solid #777;
-        border-bottom: 2px solid #777;
-    }
-    .bar {
-        position: absolute;
-        bottom: 0;
-        width: 10%;
-        background: linear-gradient(#0066cc, #003366);
-        .skill-title {
+        margin: 0 auto;
+        padding-bottom: 20px;
+        overflow: hidden;
+        .chart {
+            position: relative;
+            float: right;
+            width: 80%;
+            height: 420px;
+            margin-bottom: 20px;
+            border-left: 2px solid #777;
+            border-bottom: 2px solid #777;
+        }
+        .bar {
             position: absolute;
-            top: 50%;
-            left: 50%;
-            color: white;
-            font-size: 1.0rem;
-            text-transform: uppercase;
-            transform: translateX(-50%) translateY(-50%) rotate(-90deg);
+            bottom: 0;
+            width: 10%;
+            background: linear-gradient(#0066cc, #003366);
+            .skill-title {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                color: white;
+                font-size: 1rem;
+                text-transform: uppercase;
+                transform: translateX(-50%) translateY(-50%) rotate(-90deg);
+            }
         }
-    }
-    .chart-grid {
-        position: absolute;
-        left: 0;
-        width: 100%;
-        height: 1px;
-        border: 1px dotted #777;
-        div {
-            text-transform: uppercase;
-            font-size: 1.0rem;
-            font-weight: 800;
-            letter-spacing: -px;
-            color: #777;
-            margin: -12px 0 0 -100px;
+        .chart-grid {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            border: 1px dotted #777;
+            div {
+                text-transform: uppercase;
+                font-size: 1rem;
+                font-weight: 800;
+                letter-spacing: -px;
+                color: #777;
+                margin: -12px 0 0 -100px;
+            }
         }
-    }
-    .able {
-    float: left;
-    width: 33%;
-    padding-left: 50px;
-    line-height: 2;
-    }
-    h4 {
-        font-size: 20px;
-        font-weight: bold;
-        text-transform: uppercase;
-        background-color: #5779A4;
-        padding: 4px 12px;
-        border-radius: 4px;
-        color: #fff;
-        display: flex;
-        justify-content: center;
-    }
-    .skill-bar{
+        .able {
+            float: left;
+            width: 33%;
+            padding-left: 50px;
+            line-height: 2;
+        }
+        h4 {
+            font-size: 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            background-color: #5779a4;
+            padding: 4px 12px;
+            border-radius: 4px;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+        }
+        .skill-bar {
             display: table;
             width: 100%;
             height: 10px;
             margin-bottom: 10px;
-        .skill-rate-0 {
-            background-color: #d9d9d9;
-            display: table-cell;
-            border-left: 2px solid #fff;
-            border-right: 2px solid #fff;
-        }
-        .skill-rate-1 {
-            background-color: #66b3ff;
-            display: table-cell;
-            border-left: 2px solid #fff;
-            border-right: 2px solid #fff;
-        }
-        .skill-rate-2  {
-            background-color: #1a8cff;
-            display: table-cell;
-            border-left: 2px solid #fff;
-            border-right: 2px solid #fff;
-        }
-        .skill-rate-3  {
-            background-color: #0073e6;
-            display: table-cell;
-            border-left: 2px solid #fff;
-            border-right: 2px solid #fff;
-        }
-        .skill-rate-4  {
-            background-color: #003366;
-            display: table-cell;
-            border-left: 2px solid #fff;
-            border-right: 2px solid #fff;
+            .skill-rate-0 {
+                background-color: #d9d9d9;
+                display: table-cell;
+                border-left: 2px solid #fff;
+                border-right: 2px solid #fff;
+            }
+            .skill-rate-1 {
+                background-color: #66b3ff;
+                display: table-cell;
+                border-left: 2px solid #fff;
+                border-right: 2px solid #fff;
+            }
+            .skill-rate-2 {
+                background-color: #1a8cff;
+                display: table-cell;
+                border-left: 2px solid #fff;
+                border-right: 2px solid #fff;
+            }
+            .skill-rate-3 {
+                background-color: #0073e6;
+                display: table-cell;
+                border-left: 2px solid #fff;
+                border-right: 2px solid #fff;
+            }
+            .skill-rate-4 {
+                background-color: #003366;
+                display: table-cell;
+                border-left: 2px solid #fff;
+                border-right: 2px solid #fff;
+            }
         }
     }
-}
-
 }
 
 .background_image4 {
     width: 100%;
     height: 80vh;
-    background-image: url("../images/francesco-ungaro-nlqqldluDBw-unsplash.jpg");
+    background-image: url('../images/francesco-ungaro-nlqqldluDBw-unsplash.jpg');
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
     opacity: 0.7;
 }
-
 
 .portfolio-wrap {
     overflow: hidden;
@@ -438,7 +496,7 @@ body {
 
 .portfolio-list {
     overflow: hidden;
-    margin: 0 auto;  // 置中效果
+    margin: 0 auto; // 置中效果
     width: 80%;
     display: flex;
     flex-direction: column;
@@ -446,7 +504,7 @@ body {
         margin: 5px;
     }
     span {
-        background-color: #5779A4;
+        background-color: #5779a4;
         padding: 4px 12px;
         border-radius: 4px;
         color: #fff;
@@ -458,9 +516,10 @@ body {
         line-height: 1.5em;
         //color: #0066cc;
         float: right;
-    } 
-    img {   // 讓圖片填滿整個元素
-        width: 40%;  
+    }
+    img {
+        // 讓圖片填滿整個元素
+        width: 40%;
         height: auto;
         //transform: scale(1); // 等於放大 scaleX(2) scaleY(2);
     }
@@ -472,13 +531,12 @@ body {
 .background_image5 {
     width: 100%;
     height: 60vh;
-    background-image: url("../images/johnny-chen-bLEmFvSPLog-unsplash.jpg");
+    background-image: url('../images/johnny-chen-bLEmFvSPLog-unsplash.jpg');
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
     opacity: 0.7;
 }
-
 
 .contact-wrap {
     width: 100%;
@@ -488,7 +546,7 @@ body {
     .main-content {
         width: 100%;
         padding: 60px 50px 60px 50px;
-        font-family: 'Raleway',微軟正黑體, sans-serif;
+        font-family: 'Raleway', 微軟正黑體, sans-serif;
     }
     .contact-content {
         width: 85%;
@@ -545,8 +603,7 @@ body {
             }
         }
     }
-} 
-
+}
 
 .footer {
     width: 100%;
@@ -556,7 +613,7 @@ body {
     background-color: rgb(10, 0, 0);
     .fa-chevron-up {
         color: white;
-    }            
+    }
     a {
         display: inline-block;
         color: white;
@@ -565,27 +622,27 @@ body {
     }
 }
 
-.clearfix {   // 清除浮動
+.clearfix {
+    // 清除浮動
     clear: both;
 }
 
-@media (max-width: 768px) { // 畫面顯示正常
+@media (max-width: 768px) {
+    // 畫面顯示正常
 }
-
-
 
 @media (max-width: 568px) {
     .jumbotron {
         h1 {
-        font-size: 30px;
+            font-size: 30px;
         }
     }
     .nav {
         display: none;
     }
     .slider-wrap {
-        padding: 50px ;
-        .slider{
+        padding: 50px;
+        .slider {
             width: 100%;
         }
         .intro {
@@ -629,40 +686,40 @@ body {
 }
 
 //animated
-.animatedJS{
+.animatedJS {
     opacity: 0;
-    transition:  1.5s;
+    transition: 1.5s;
     transform: translateY(50px);
 }
-.animatedTop{
+.animatedTop {
     opacity: 0;
-    transition:  1.5s;
+    transition: 1.5s;
     transform: translateY(150px);
 }
 // 往上淡入
-.fadeIn{
+.fadeIn {
     opacity: 1;
     transform: translateY(0);
 }
 // 一開始右移 300px
-.animatedRight{
+.animatedRight {
     opacity: 0;
-    transition:  1.5s;
+    transition: 1.5s;
     transform: translateX(300px);
 }
 // 往右淡入
-.fadeRight{
+.fadeRight {
     opacity: 1;
     transform: translateX(0);
 }
 // 一開始左移 300px
-.animatedLeft{
+.animatedLeft {
     opacity: 0;
-    transition:  1.5s;
+    transition: 1.5s;
     transform: translateX(-300px);
 }
 // 往左淡入
-.fadeLeft{
+.fadeLeft {
     opacity: 1;
     transform: translateX(0);
 }
